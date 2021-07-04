@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<img src="" id="photoReturn">
 
-</body>
+<br><br>
+
+<input type="text" id="usernameInput">
+
+<button onclick="getPhoto($('#usernameInput').val().trim())">Get profile photo</button>
 </html>
