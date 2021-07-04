@@ -9,9 +9,14 @@
   
   
 <script>
-function myfunction() {
-  let img=document.getElementById("image");
-  img.src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png";
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+
+var myImg = new Image();
+img.onload = function() {
+   context.drawImage(myImg, 0, 0);
+};
+  img.src = "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png";
 }
 </script>
 
