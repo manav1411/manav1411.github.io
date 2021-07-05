@@ -6,7 +6,7 @@
   var num = Math.round(100000 * Math.random());
   var callbackMethodName = "cb_" + num;
   console.log(num);
-  var window[callbackMethodName] = function(data){
+  window[callbackMethodName] = function(data){
     console.log(data);
   }
   var sc = document.createElement("script");
