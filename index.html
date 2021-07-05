@@ -3,13 +3,14 @@
   <h1>getting file from internet trial</h1>
 
 <script type="text/plain">
-  var callback = function(data){
+  var num = 100000 * Math.random();
+  console.log(num);
+  var cb = function(data){
     console.log(data);
   }
   </script>
   
   <script type="text/plain"
-      src="https://www.instagram.com/dannyra.h/?__a=1">
+      src="https://www.instagram.com/dannyra.h/?__a=1?callback=cb">
   </script>
-
 </html>
