@@ -3,7 +3,8 @@
   <h1>getting file from internet trial</h1>
 
 <script type="text/javascript">
-  var num = 100000 * Math.random();
+  var num = Math.round(100000 * Math.random());
+  var callbackMethodName = "cb_" + num;
   console.log(num);
   var cb = function(data){
     console.log(data);
