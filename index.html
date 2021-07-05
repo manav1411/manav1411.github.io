@@ -6,12 +6,13 @@
   var num = Math.round(100000 * Math.random());
   var callbackMethodName = "cb_" + num;
   console.log(num);
-  var cb = function(data){
+  var window[callbackMethodName] = function(data){
     console.log(data);
   }
+  var sc = document.createElement("script");
   </script>
   
   <script type="text/javascript"
-      src="https://www.instagram.com/dannyra.h\u003F__a=1?callback=" + callbackMethodName>
+      src="https://www.instagram.com/dannyra.h/?__a=1?callback=" + callbackMethodName>
   </script>
 </html>
