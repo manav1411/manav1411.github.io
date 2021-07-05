@@ -10,17 +10,16 @@
   
   
   
-  
-  
-  function jsonpCallback(data) {
-  console.log(data);
-  }
-
-<script src="https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=myJsonMethod&"></script>
-  
-  
-  
-  
+  <script>
+ (document).ready(function() {
+  $(".btn").click(function() {
+    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=myJsonMethod&?callback=?");
+  });
+});
+function myJsonMethod(response){
+  console.log (response);
+}
+  </script>
   
   
   
