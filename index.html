@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <h1>getting file from internet trial</h1>
+<body>
 
-  
-  document.getElementById('https://www.instagram.com/dannyra.h/?__a=1').contentWindow.document.body.innerHTML
+//this is iframe I ll look for its source
+<iframe id="frmin" src="http://www.w3schools.com"></iframe>
+
+<p>Click the button to see the source.</p>
+//this is display I will display Iframe's source here
+<div id="srcout"></div>
+
+//show source upon click event
+<button onclick="myFunction()">Show it</button>
+
+<script>
+function myFunction() {
+//get Iframe element ready for javascript manipulation
+var frm = document.getElementById("frmin");
+//get display element ready for javascript manipulation
+var dsp = document.getElementById("srcout");
+
+//find Iframe's HTML (root) element, [0] because I'm using getElementsByTagName which returns node list so I have to chose the 1st one, and put its outer content (i.e. with outer tags) to display, i.e. dsp.innerText. I use innerText because I want a text output not formatted as html.
+dsp.innerText = frm.contentDocument.getElementsByTagName('html')[0].outerHTML;
+
+}
+</script>
+
+</body> 
 </html>
