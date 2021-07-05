@@ -2,19 +2,6 @@
 <html>
   <h1>getting file from internet trial</h1>
 
-<script type="text/javascript">
-  var num = Math.round(100000 * Math.random());
-  var callbackMethodName = "cb_" + num;
-  console.log(num);
-  window[callbackMethodName] = function(data){
-    console.log(data);
-  }
-  var sc = document.createElement("script");
-  sc.src = "http://instagram.com"
-  console.log(sc);
-  </script>
   
-  <script type="text/javascript"
-      src="https://www.instagram.com/dannyra.h/?__a=1?callback=" + callbackMethodName>
-  </script>
+  document.getElementById('https://www.instagram.com/dannyra.h/?__a=1').contentWindow.document.body.innerHTML
 </html>
