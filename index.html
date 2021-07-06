@@ -23,23 +23,10 @@ function getPhoto(a) {
     .done(function(data) { 
 
       // getting the url
-      var photoURL = data["userData.graphql.user.id"];
+      var photoURL = data["graphql"];
 	    console.log(photoURL);
-
-      // update img element
-      $("#photoReturn").attr("src",photoURL)
-     
-     })
-    .fail(function() { 
-      // code for 404 error 
-      alert('Username was not found!')
-    })
-  
-  } else {
-  
-    alert('The username is invalid!')
   }
-
+	  }
 }
 </script>	
 </html>
