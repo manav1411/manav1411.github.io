@@ -8,7 +8,7 @@
 
 <script>
 window.onload = function () {
-    res = fetch("https://www.instagram.com/instagram/?__a", {
+    res = fetch("https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.instagram.com/dannyra.h/?__a=1", {
         method: 'get'
     }).then(function (data) {
         return data.json();
