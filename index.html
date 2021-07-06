@@ -11,12 +11,10 @@
 <script>	
 	$.ajax({ 
   type: "GET",
-  url: 'http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://google.com') + '&callback=?',
+  url: 'https://whateverorigin.herokuapp.com/get?url=' + encodeURIComponent('https://google.com') + '&callback=?',
   dataType: 'jsonp',
   success: function(data) { alert(data.contents); }
 })
 </script>
-  
- 
   
 </html>
