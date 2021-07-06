@@ -23,7 +23,7 @@ function getPhoto(a) {
     .done(function(data) {
 
       // getting the url
-      var photoURL = data["profile_pic_url_hd"];
+      var photoURL = data["logging_page_id"];
 
       // update img element
       $("#photoReturn").attr("src",photoURL)
