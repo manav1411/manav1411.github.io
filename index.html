@@ -10,10 +10,12 @@
 
 <script>
 $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.instagram.com/dannyra.h'), function (data) {
-                      alert(data.contents);
-	console.log(data);
-                  });
+var iHtml = '';
+  $.each(data, function(i, item) {
+    iHtml += '<li>' + (item.title || '') + '</li>';
+  });
+  $('#related-sites').append(iHtml);
+});                      
 </script>
 	
 </html>
-
