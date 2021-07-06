@@ -5,30 +5,34 @@
 <input type="text" id="usernameInput">
 <button onclick="myfunction()">stalk them!</button>
 <br>
-<img id="myImg" width="400" height="300">
-  <p id="demo"></p>
-  
-  
-  
-  <script>
- (document).ready(function() {
-  $(".btn").click(function() {
-    $.getJSON("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=myJsonMethod&?callback=?");
-  });
-});
-function myJsonMethod(response){
-  console.log (response);
-}
-  </script>
-  
-  
-  
+
   
 <script>
-function myfunction() {
-  document.getElementById("myImg").src = "https://www.pandasecurity.com/en/mediacenter/src/uploads/2019/07/pandasecurity-How-do-hackers-pick-their-targets.jpg";
-  document.getElementById("demo").innerHTML = "gotteeeeeem.";
-
-}
+  getJSON('https://www.instagram.com/dannyra.h/?__a=1',
+function(err, data) {
+  if (err !== null) {
+    alert('Something went wrong: ' + err);
+  } else {
+    alert('Your query count: ' + data.query.count);
+  }
+});
 </script>
+  
+  <script>
+    var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+  </script>
+  
 </html>
