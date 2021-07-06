@@ -6,17 +6,12 @@
 <input type="text" id="usernameInput">
 <button onclick="myfunction()">stalk them!</button>	
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+
 <script>
-window.onload = function () {
-    res = fetch('https://api.allorigins.win/get?url=https%3A%2F%2Fwww.instagram.com%2Fdannyra.h%2F%3F__a%3D1', {
-        method: 'get'
-    }).then(function (data) {
-        return data.json();
-    }).catch(function (error) {
-        console.log("ERROR".concat(error.toString()));
-    });
-    console.log(res.user);
-};
+$.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.instagram.com/dannyra.h/?__a=1'), function (data) {
+                      alert(data.contents);
+                  });
 </script>
 	
 </html>
