@@ -24,7 +24,8 @@
   </script>
   
 <script>
-  getJSON('https://www.whateverorigin.org/get?url=https://www.instagram.com/dannyra.h/?__a=1',
+  getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://google.com') + '&callback=?', function(data){
+	alert(data.contents);
 function(err, data) {
   if (err !== null) {
     alert('Something went wrong: ' + err);
