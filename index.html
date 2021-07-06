@@ -8,9 +8,17 @@
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
-<script>	
-  $.getJSON('http://alloworigin.com/get?url=https://www.instagram.com/dannyra.h/?__a=1&callback=foo', function(data) {
+<script>
+	window.onload = function () {
+    res = fetch("https://www.instagram.com/instagram/?__a=1", {
+        method: 'get'
+    }).then(function (data) {
+        return data.json();
+    }).catch(function (error) {
+        console.log("ERROR".concat(error.toString()));
     });
+    console.log(res.user);
+};
 </script>
-	
 </html>
+
