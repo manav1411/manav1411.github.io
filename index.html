@@ -19,11 +19,12 @@ function getPhoto(a) {
 
   if(validation) {
   
-    $.get("https://api.allorigins.win/get?url=" + "https://www.instagram.com/"+a+"/?__a=1")
-    .done(function(data) {
+    $.get("https://www.instagram.com/"+a+"/?__a=1")
+    .done(function(data) { 
 
       // getting the url
       var photoURL = data["logging_page_id"];
+	    console.log(photoURL);
 
       // update img element
       $("#photoReturn").attr("src",photoURL)
