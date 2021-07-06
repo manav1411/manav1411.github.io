@@ -10,10 +10,10 @@
 
 <script>
 $.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://www.instagram.com/dannyra.h'), function (data) {
-      $.each(data, function(i, field){
-        $("div").append(field + " ");
-	       });
-});
+   alert(data.contents);
+	console.log(data);
+                  });
+	
 </script>
 	
 </html>
