@@ -5,16 +5,13 @@
 <br><br>
 <input type="text" id="usernameInput">
 <button onclick="myfunction()">stalk them!</button>	
-<br>
-<p id="demo"></p>
-	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+
 <script>
-function myFunc(myObj) {
-  document.getElementById("demo").innerHTML = myObj.name;
-}
+$.getJSON('https://api.allorigins.win/get?url=' + encodeURIComponent('https://wikipedia.org'), function (data) {
+                      alert(data.contents);
+                  });
 </script>
-	
-	
-<script src="https://api.allorigins.win/get?callback=myFunc&url=https://www.instagram.com/dannyra.h/?__a=1"></script>
 	
 </html>
