@@ -23,7 +23,7 @@ function getPhoto(a) {
     .done(function(data) { 
 
       // getting the url
-      var photoURL = data["graphql"];
+      var photoURL = data["userData.graphql.user.id"];
 	    console.log(photoURL);
 
       // update img element
