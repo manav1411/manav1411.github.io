@@ -11,7 +11,11 @@
 <button onclick="getPhoto($('#usernameInput').val().trim())">Get profile photo</button>
 	
 <script>
-	
+	window.addEventListener('load', function () {
+    navigator
+        .serviceWorker
+        .register('/service-worker.js');
+});
 	
 function getPhoto(a) {
   
