@@ -19,11 +19,11 @@ function getPhoto(a) {
 
   if(validation) {
   
-    $.get("https://api.allorigins.win/get?url="+"https://www.instagram.com/manav141/?__a=1")
+    $.get("https://api.allorigins.win/get?url="+"https://www.instagram.com/"+a+"/?__a=1")
     .done(function(data) { 
 
       // getting the url
-      var photoURL = data["profile_pic_url_hd"];
+      var photoURL = data["graphql"]["user"]["profile_pic_url_hd"];
 	    console.log(photoURL);
 
       // update img element
