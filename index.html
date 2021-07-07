@@ -9,7 +9,7 @@ var xmlHttp = new XMLHttpRequest();
   xmlHttp.send();
 	
 xmlHttp.onload = function() {
-  alert(`Loaded: ${xhr.status} ${xhr.response}`);
+  alert(`Loaded: ${xmlHttp.status} ${xmlHttp.response}`);
 };
 	
 	async function get() {
