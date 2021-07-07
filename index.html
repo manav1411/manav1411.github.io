@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script>	
-	Object.defineProperty(navigator, 'userAgent', {
-    get: function () { return 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Chrome/9.0.570.1 Safari/534.11'; }
-});
+	get.setHeader("User-Agent", "Mozilla/5.0 (Linux; Android 9; GM1903 Build/PKQ1.190110.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.143 Mobile Safari/537.36 Instagram 103.1.0.15.119 Android (28/9; 420dpi; 1080x2260; OnePlus; GM1903; OnePlus7; qcom; sv_SE; 164094539)");
 	  async function get() {
     let url = "https://api.allorigins.win/get?url="+"https://instagram.com/instagram/?__a=1"
     let obj = await (await fetch(url)).json();
