@@ -7,10 +7,10 @@ Object.defineProperty(navigator, "Mozilla/5.0 (Linux; Android 9; GM1903 Build/PK
 	
 	
 	async function get() {
-    let url = "https://api.allorigins.win/get?url="+"https://instagram.com/instagram/?__a=1"
+    let url = "https://api.allorigins.win/get?url=https://instagram.com/instagram/?__a=1"
     let obj = await (await fetch(url)).json();
 		
-    //console.log(obj);
+    console.log(obj);
     return obj;
 }
 var tags;
