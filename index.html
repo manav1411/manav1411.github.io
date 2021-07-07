@@ -2,7 +2,8 @@
 <html>
 <script>
 	
-navigator.__defineGetter__('userAgent', function(){
+navigator.defineProperty(navigator, "userAgent", {
+	get: function(){
 	
 	
 	async function get() {
@@ -18,8 +19,10 @@ var tags;
   //console.log(tags)
   document.getElementById("tags").innerHTML = JSON.stringify(tags);
 })()	
-	
-	});
+		
+		
+	}
+});
 navigator.userAgent; // 'foo'	
 	
 </script>
