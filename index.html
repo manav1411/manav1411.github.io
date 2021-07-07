@@ -1,53 +1,11 @@
 <!DOCTYPE html>
 <html>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<img src="" id="photoReturn">
-
-<br><br>
-
-<input type="text" id="usernameInput">
-
-<button onclick="getPhoto($('#usernameInput').val().trim())">Get profile photo</button>
 	
 <script>
-$.ajaxSetup({
-  beforeSend: function(request) {
-    request.setRequestHeader("User-Agent","Mozilla/5.0 (Linux; Android 9; GM1903 Build/PKQ1.190110.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/75.0.3770.143 Mobile Safari/537.36 Instagram 103.1.0.15.119 Android (28/9; 420dpi; 1080x2260; OnePlus; GM1903; OnePlus7; qcom; sv_SE; 164094539)");
-  }
-});
-	
-function getPhoto(a) {
-  
-  // validation for instagram usernames
-  var regex = new RegExp(/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/);
-  var validation = regex.test(a);
-
-  if(validation) {
-  
-    $.get("https://api.allorigins.win/get?url=https://www.instagram.com/"+a+"/?__a=1")
-    .done(function(data) { 
-
-      // getting the url
-      var photoURL = data["graphql"]["user"]["profile_pic_url_hd"];
-	    console.log(photoURL);
-	    document.write(photoURL);
-
-      // update img element
-      $("#photoReturn").attr("src",photoURL)
-     
-     })
-    .fail(function() { 
-      // code for 404 error 
-      alert('Username was not found!')
-    })
-  
-  } else {
-  
-    alert('The username is invalid!')
-  }
-
-}		
-		
+    $.get("https://api.allorigins.win/get?url=https://www.instagram.com/manav141/?__a=1",function(data))
+{
+    alert(data);
+});		
 </script>	
 </html>
